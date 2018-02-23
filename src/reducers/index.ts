@@ -1,10 +1,10 @@
 import { combineReducers, Reducer } from 'redux';
-import todos from './todos';
+import neos from './neos';
 
 export interface RootState {
-  todos: TodoStoreState;
+  neos: NeoStoreState;
 }
 
 export default combineReducers<RootState>({
-  todos
+  neos
 });

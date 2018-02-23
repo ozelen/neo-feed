@@ -43,12 +43,14 @@
     "webpack-dev-server": "^2.9.4"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "classnames": "^2.2.5",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
     "redux": "^3.7.2",
-    "redux-actions": "^2.2.1"
+    "redux-actions": "^2.2.1",
+    "redux-observable": "^0.18.0"
   }
 }

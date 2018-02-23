@@ -1,13 +1,20 @@
 /** TodoMVC model definitions **/
 
-declare interface TodoItemData {
-  id?: TodoItemId;
-  text?: string;
-  completed?: boolean;
+declare interface NeoItemData {
+  id?: NeoItemId;
+  is_potentially_hazardous_asteroid: boolean;
+  close_approach_data: {
+    relative_velocity: {
+      kilometers_per_hour: number
+    }
+  };
+
+  estimated_diameter: {
+    kilometers: { estimated_diameter_max: number }
+  };
 }
 
-declare type TodoItemId = number;
-
-declare type TodoFilterType = 'SHOW_ALL' | 'SHOW_ACTIVE' | 'SHOW_COMPLETED';
-
-declare type TodoStoreState = TodoItemData[];
+declare type NeoItemId = number;
+declare type NeoStoreState = {
+  items: NeoItemData[]
+}
