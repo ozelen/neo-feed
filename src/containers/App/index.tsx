@@ -9,7 +9,7 @@ import { MainSection } from '../../components';
 
 export namespace App {
   export interface Props extends RouteComponentProps<void> {
-    neos: NeoItemData[];
+    neos: INeoItemData[];
     actions: typeof NeoActions;
   }
 
@@ -24,6 +24,10 @@ export namespace App {
 )
 
 export class App extends React.Component<App.Props, App.State> {
+  componentDidMount() {
+    console.log('HELLO WORLD');
+    this.props.actions.startPolling();
+  }
 
   render() {
     const { children } = this.props;
