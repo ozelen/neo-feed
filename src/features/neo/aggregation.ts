@@ -1,8 +1,8 @@
 export const aggCloseApproachData = (agg: IDayAggregatedData, cad: ICloseApproachData[]):
   {closest: number, fastest: number} =>
     cad.reduce((res, cur) => ({
-      closest: Math.min(res.closest, cur.miss_distance.kilometers),
-      fastest: Math.max(res.fastest, cur.relative_velocity.kilometers_per_hour)
+      closest: Math.min(res.closest, +cur.miss_distance.kilometers),
+      fastest: Math.max(res.fastest, +cur.relative_velocity.kilometers_per_hour)
     }), {closest: agg.closest, fastest: agg.fastest});
 
 export const byDay = date =>
