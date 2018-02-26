@@ -4494,6 +4494,10 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^2.0.0"
     inherits "^2.0.1"
 
+rxios@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/rxios/-/rxios-1.1.2.tgz#412bf98a646eb1662fe9e6941d1c93f39e643e61"
+
 rxjs@^5.5.6:
   version "5.5.6"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.5.6.tgz#e31fb96d6fd2ff1fd84bcea8ae9c02d007179c02"

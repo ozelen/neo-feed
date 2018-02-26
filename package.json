@@ -52,6 +52,7 @@
     "redux": "^3.7.2",
     "redux-actions": "^2.2.1",
     "redux-observable": "^0.18.0",
+    "rxios": "^1.1.2",
     "rxjs": "^5.5.6",
     "typescript-fsa-redux-observable": "^0.18.0"
   }

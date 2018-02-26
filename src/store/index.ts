@@ -1,20 +1,20 @@
 import { createStore, applyMiddleware, Store } from 'redux';
 import { composeWithDevTools } from "redux-devtools-extension";
-import { pollingMiddleware } from '../middleware';
-import rootReducer, { RootState } from '../reducers';
+import { middleware } from './middlewares';
+import { RootState } from './state';
+import rootReducer  from './reducers';
+const { NODE_ENV } = process.env;
 
 export function configureStore(initialState?: RootState) {
-  let middleware = applyMiddleware(pollingMiddleware);
+  const md = NODE_ENV === 'development' ?
+    composeWithDevTools(applyMiddleware(middleware)) :
+    applyMiddleware(middleware);
 
-  if (process.env.NODE_ENV === 'development') {
-    middleware = composeWithDevTools(middleware);
-  }
-
-  const store = createStore(rootReducer, initialState, middleware) as Store<RootState>;
+  const store = createStore(rootReducer, initialState, md) as Store<RootState>;
 
   if (module.hot) {
-    module.hot.accept('../reducers', () => {
-      const nextReducer = require('../reducers');
+    module.hot.accept('./reducers', () => {
+      const nextReducer = require('./reducers');
       store.replaceReducer(nextReducer);
     });
   }

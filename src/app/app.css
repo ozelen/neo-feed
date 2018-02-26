@@ -26,7 +26,7 @@ body {
   background: #f5f5f5;
   color: #4d4d4d;
   min-width: 230px;
-  max-width: 550px;
+  max-width: 80vw;
   margin: 0 auto;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
@@ -42,7 +42,7 @@ input[type="checkbox"] {
 
 .normal {
   background: #fff;
-  margin: 200px 0 40px 0;
+  margin: 100px 0 40px 0;
   position: relative;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
 }
@@ -67,12 +67,11 @@ input[type="checkbox"] {
 
 .normal h1 {
   position: absolute;
-  top: -155px;
+  top: -50px;
   width: 100%;
-  font-size: 100px;
-  font-weight: 100;
+  font-weight: 150;
   text-align: center;
-  color: rgba(175, 47, 47, 0.15);
+  color: rgba(61, 58, 204, 0.829);
   -webkit-text-rendering: optimizeLegibility;
   -moz-text-rendering: optimizeLegibility;
   -ms-text-rendering: optimizeLegibility;
