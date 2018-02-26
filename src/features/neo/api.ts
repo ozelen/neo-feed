@@ -3,18 +3,11 @@ import { ajax } from 'rxjs/observable/dom/ajax';
 import axios from 'axios';
 import { Rxios } from 'rxios';
 import { AxiosPromise } from 'axios';
-
-export const API_KEY = 'SPboJP8XCDF9nlUzSqcqzh0Mq9sJuy6Hf27FuTFl';
-
-export const API_HOST = 'https://api.nasa.gov';
-export const NEO_FEED_URL = `${API_HOST}/neo/rest/v1/feed`;
-
-export const startDate = new Date(2018, new Date().getMonth(), 1);
-export const endDate = new Date(2018, new Date().getMonth(), 8);
+import {API_KEY, NEO_FEED_URL} from './neo.constants';
 
 const http = new Rxios({
   baseURL: NEO_FEED_URL
-})
+});
 
 export const getUrl = (from=1, to=from+7) =>
   `/?api_key=${API_KEY}&start_date=${getDate(from+1)}&end_date=${getDate(to)}`;
